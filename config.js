@@ -49,7 +49,7 @@ var appConfig = {
   defaultDomain: './data/',
   domain: Util.getUrlParameter('domain'),
   // 如果设置，标题固定用该字段
-  defaultTitle: '中原地產VR',
+  defaultTitle: '16B VR',
   // 在非多户型房源，无houseInfo的情况下是否使用viewData内标题
   useViewDataTitle: Util.getUrlParameter('start3d') && Util.getUrlParameter('start3d') == 1 ? true : false,
   // true初始为3D;false或不写默认panorama
