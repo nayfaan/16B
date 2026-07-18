@@ -2,13 +2,6 @@
   "use strict";
 
   var HID = "samuel_4c07d651-19bd-46e0-abd9-bf1f11977614";
-  try {
-    if (location.search.indexOf("hid=") === -1) {
-      var sep = location.search ? "&" : "?";
-      history.replaceState(null, "",
-        location.pathname + location.search + sep + "hid=" + HID + "&lang=hk&staff=0");
-    }
-  } catch (e) {}
   window.hid = HID;
 
   var BLANK_PNG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+M8AAAMCAQGZjW2CAAAAAElFTkSuQmCC";

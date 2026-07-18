@@ -55,6 +55,22 @@
 <body
   style="background-size: cover;background-color: #2d2e28;background-position: center;background-repeat: no-repeat;opacity: .65">
   <script src="./config.js?version=202606051131"></script>
+  <script>
+    (function () {
+      if (window.Util && typeof Util.getUrlParameter === "function") {
+        var DEFAULTS = { hid: "samuel_4c07d651-19bd-46e0-abd9-bf1f11977614", lang: "hk", staff: "0" };
+        var orig = Util.getUrlParameter;
+        Util.getUrlParameter = function (name) {
+          var v = orig.call(this, name);
+          if ((v === null || v === undefined || v === "") &&
+              name && Object.prototype.hasOwnProperty.call(DEFAULTS, String(name).toLowerCase())) {
+            return DEFAULTS[String(name).toLowerCase()];
+          }
+          return v;
+        };
+      }
+    })();
+  </script>
   <script src="./introducingConfig.js?version=202606051131"></script>
   <script src="./static/js/common/loader.js?version=202606051131"></script>
   <div class="safe-area top"></div>
